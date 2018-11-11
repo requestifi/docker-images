@@ -1,0 +1,4 @@
+# Ignore database volumes
+./data/redis
+./data/mysql
+./data/mongo
