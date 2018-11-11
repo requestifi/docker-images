@@ -39,4 +39,15 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
+  # Set up the NodeJS server
+  node:
+    container_name: requestify-node-server
+    build: node
+    restart: always
+    networks:
+      - requestify
+    ports:
+      - 8080:8080
+    environment:
+      PROJECT_DIR: ${REQUESTIFY_PROJECT_DIR}
 
