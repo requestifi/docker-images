@@ -2,3 +2,6 @@
 ./data/redis
 ./data/mysql
 ./data/mongo
+
+# Ignore the root .env file
+.env
